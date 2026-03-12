@@ -1,0 +1,9 @@
+{
+  "name": "sito-pres",
+  "version": "1.0.0",
+  "description": "Sito personale semplice di presentazione del percorso amatoriale di Gabriele nel karting.",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
+

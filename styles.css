@@ -445,6 +445,19 @@ body::before {
   color: #1b1205;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding: 1.5rem 0 2rem;

@@ -372,6 +372,7 @@ body::before {
 .goals-list {
   margin: 1rem 0 0;
   padding-left: 1.1rem;
+  list-style: none;
 }
 
 .goals-list li {
@@ -385,7 +386,7 @@ body::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.65em;
+  top: 0.5em;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 999px;
@@ -441,6 +442,25 @@ body::before {
 }
 
 .contact-list a:hover {
+  background: var(--accent-soft);
+  color: #1b1205;
+}
+
+.story-block a,
+.hero-text a,
+.info-card a,
+.note-box a {
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.05rem 0.35rem;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.story-block a:hover,
+.hero-text a:hover,
+.info-card a:hover,
+.note-box a:hover {
   background: var(--accent-soft);
   color: #1b1205;
 }

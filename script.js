@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Barra di avanzamento dello scroll
   const progressBar = document.querySelector(".scroll-progress");
 
-  const sections = document.querySelectorAll("main section[id]");
-
   function handleScroll() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const docHeight =
@@ -37,26 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
     if (progressBar) {
       progressBar.style.width = `${progress}%`;
-    }
-
-    // Evidenzia la sezione corrente nel menu
-    let currentId = "";
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= 120 && rect.bottom >= 120) {
-        currentId = section.id;
-      }
-    });
-
-    if (currentId) {
-      navLinks.forEach((link) => {
-        const href = link.getAttribute("href");
-        if (href === `#${currentId}`) {
-          link.classList.add("is-active");
-        } else {
-          link.classList.remove("is-active");
-        }
-      });
     }
   }
 

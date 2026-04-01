@@ -120,6 +120,21 @@ body::before {
   background: var(--accent-soft);
 }
 
+.main-nav a.nav-highlight {
+  color: #1b1205;
+  background: linear-gradient(90deg, var(--accent), #ffdf9c);
+  border-color: rgba(240, 182, 84, 0.55);
+  font-weight: 600;
+  box-shadow: 0 12px 28px rgba(240, 182, 84, 0.14);
+}
+
+.main-nav a.nav-highlight:hover {
+  color: #1b1205;
+  border-color: rgba(240, 182, 84, 0.75);
+  background: linear-gradient(90deg, #ffdf9c, var(--accent));
+  transform: translateY(-2px);
+}
+
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -342,6 +357,32 @@ body::before {
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--muted);
+}
+
+.skills-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.skills-list li {
+  color: var(--muted);
+  position: relative;
+  padding-left: 1.1rem;
+  line-height: 1.55;
+}
+
+.skills-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, var(--accent) 0, #ffdf9c 70%);
 }
 
 .story-block::before {

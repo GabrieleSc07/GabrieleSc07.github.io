@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
       observer.observe(el);
     });
   } else {
-    // Fallback per browser vecchi: mostra subito tutto
     revealElements.forEach((el) => {
       el.classList.add("reveal-visible");
     });

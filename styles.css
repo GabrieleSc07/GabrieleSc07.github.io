@@ -531,6 +531,60 @@ body::before {
   color: var(--muted);
 }
 
+
+/* Accessibilità Focus Visible */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Badge Competenze e Tecnologie */
+.tech-group {
+  margin-bottom: 1.1rem;
+}
+
+.tech-group:last-child {
+  margin-bottom: 0;
+}
+
+.tech-group-title {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 0.28rem 0.65rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+  border-color: rgba(240, 182, 84, 0.6);
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.footer-copy {
+  margin: 0 0 0.85rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -576,6 +630,75 @@ body::before {
 
   .kart-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-links {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* Stili per esportazione e stampa CV */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  body::before,
+  .scroll-progress,
+  .site-header,
+  .site-footer,
+  .hero-photo-wrapper {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .section {
+    padding: 1.2rem 0 !important;
+    background: transparent !important;
+    page-break-inside: avoid;
+  }
+
+  .hero {
+    padding: 1rem 0 !important;
+  }
+
+  .hero-text,
+  .info-card,
+  .story-block,
+  .note-box {
+    background: #fcfcfc !important;
+    border: 1px solid #d5d5d5 !important;
+    box-shadow: none !important;
+    color: #222 !important;
+  }
+
+  .tech-badge {
+    background: #f0f0f0 !important;
+    border-color: #ccc !important;
+    color: #222 !important;
+  }
+
+  .hero-text h2,
+  .section h3,
+  .info-card h4,
+  .story-block h4,
+  .tech-group-title {
+    color: #000 !important;
+  }
+
+  p, li, .hero-text p, .story-block p {
+    color: #333 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
   }
 }
 

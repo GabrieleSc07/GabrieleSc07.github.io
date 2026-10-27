@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
       {
-        threshold: 0.2,
+        threshold: 0.15,
+        rootMargin: "0px 0px -30px 0px",
       }
     );
 
@@ -71,4 +72,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
